@@ -27,18 +27,10 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   song_choice = gets.chomp 
-  #songs.each do |song|
-    #  until i = 10 do 
-    #  i = 0 
-    #  if song_choice == song || song_choice == i+1 
-    #    puts "Playing #{song}"
-    #  end
-    #  i+=1 
-    #end
-    
-    
-    #end
-  song_choice
+  songs.each do |song|
+    if song_choice.class == String && song_choice == song
+      puts "Playing #{song}"
+    elsif song_choice.class == Integer && song_choice == 
   
 
 end
