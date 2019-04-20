@@ -41,5 +41,19 @@ def exit_jukebox
   puts "Goodbye"
 end
 
-def 
-  
+def run 
+  help
+  puts "Please enter a command:"
+  user_response = gets.chomp 
+  until user_response.downcase = "exit" do 
+    if user_response.downcase == "list"
+      list
+    elsif user_response.downcase == "play"
+      play 
+    elsif user_response.downcase == "help"
+      help
+    else
+      exit_jukebox
+    end
+    
+      
