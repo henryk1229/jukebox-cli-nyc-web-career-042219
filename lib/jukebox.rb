@@ -43,6 +43,7 @@ end
 
 def run 
   help
+  
   puts "Please enter a command:"
   user_response = gets.chomp.downcase  
   until user_response = "exit" do 
