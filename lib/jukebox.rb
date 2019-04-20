@@ -44,13 +44,13 @@ end
 def run 
   help
   puts "Please enter a command:"
-  user_response = gets.chomp 
-  until user_response.downcase = "exit" do 
-    if user_response.downcase == "list"
+  user_response = gets.chomp.downcase  
+  until user_response = "exit" do 
+    if user_response == "list"
       list(songs)
-    elsif user_response.downcase == "play"
+    elsif user_response == "play"
       play(songs) 
-    else user_response.downcase == "help"
+    else user_response == "help"
       help
       
     end
