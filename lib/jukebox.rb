@@ -44,18 +44,24 @@ end
 def run 
   help
   
-  puts "Please enter a command:"
-  user_response = gets.chomp.downcase  
-  until user_response = "exit" do 
-    if user_response == "list"
+  input = ""
+  while input
+    puts "Please enter a command:"
+    input = gets.chomp.downcase 
+    case input
+    when 'list'
       list(songs)
-    elsif user_response == "play"
-      play(songs) 
-    else user_response == "help"
+    when 'play'
+      list(songs)
+      play(songs)
+    when 'help'
       help
-      
+    when 'exit'
+      exit_jukebox
+      break
+    else
+      help
     end
-  exit_jukebox
   end
 end
     
