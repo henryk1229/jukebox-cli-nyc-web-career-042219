@@ -50,11 +50,11 @@ def run
       list
     elsif user_response.downcase == "play"
       play 
-    elsif user_response.downcase == "help"
+    else user_response.downcase == "help"
       help
-    else
-      exit_jukebox
+      
     end
+  exit_jukebox
   end
 end
     
