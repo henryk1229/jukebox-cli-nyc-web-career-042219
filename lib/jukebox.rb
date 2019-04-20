@@ -47,9 +47,9 @@ def run
   user_response = gets.chomp 
   until user_response.downcase = "exit" do 
     if user_response.downcase == "list"
-      list
+      list(songs)
     elsif user_response.downcase == "play"
-      play 
+      play(songs) 
     else user_response.downcase == "help"
       help
       
